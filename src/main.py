@@ -81,6 +81,7 @@ def dblp_generation(G, path_length, heterg_dictionary, start=None):
     return path
 
 def generate_walks(G, num_walks, walk_length, heterg_dictionary):
+  print 'Generating walks .. '
   walks = []
   nodes = list(G.nodes())
 
@@ -89,7 +90,7 @@ def generate_walks(G, num_walks, walk_length, heterg_dictionary):
     for node in nodes:
 		just_walks = dblp_generation(G, walk_length, heterg_dictionary, start=node)
 		walks.append(just_walks)
-
+  print 'Walks done .. '
   return walks
 
 def generate_node_types():
@@ -111,7 +112,9 @@ def main(args):
 	G = nx.read_edgelist(args.input)
 	heterg_dictionary = generate_node_types()
 	walks = generate_walks(G, args.num_walks, args.walk_length, heterg_dictionary)
+	print 'Starting training .. '
 	model = Word2Vec(walks, size=args.dimensions, window=args.window_size, min_count=0, workers=args.workers)
+	print 'Finished training .. '
 	model.save_word2vec_format(args.output)
 
 
