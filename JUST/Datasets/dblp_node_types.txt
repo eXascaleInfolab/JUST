@@ -1,0 +1,6 @@
+a : p
+t : p
+v : p
+p : a
+p : t
+p : v
