@@ -7,7 +7,7 @@ Install requirements:
 pip install -r requirements.txt 
 
 How to run example:
-python src/main.py --input Datasets/dblp.edgelist --node_types Datasets/dblp_node_types.txt --dimensions 128 --walk_length 100 --num_walks 10 --window-size 10 --alpha 0.5 --output dblp.embeddings
+python src/main.py --input Datasets/DBLP/dblp.edgelist --node_types Datasets/DBLP/dblp_node_types.txt --dimensions 128 --walk_length 100 --num_walks 10 --window-size 10 --alpha 0.5 --output dblp.embeddings
 
 Input:
 1) Edgelist format, the prefix of each node should indicate the node type.

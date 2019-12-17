@@ -1,4 +1,4 @@
-actor_id	database	data mining	machine learning	information retrieval
+author_id	database	data mining	machine learning	information retrieval
 a1	0	0	1	0
 a5	0	0	1	0
 a8	0	0	1	0
